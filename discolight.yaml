@@ -1,0 +1,58 @@
+esphome:
+  name: discolight
+
+esp8266:
+  board: nodemcuv2
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+
+ota:
+  password: ""
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_pw
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Discolight Fallback Hotspot"
+    password: !secret hotspot_pw
+
+captive_portal:
+
+light:
+  - platform: fastled_clockless
+    chipset: WS2812B
+    pin: GPIO00
+    num_leds: 76
+    rgb_order: BRG
+    name: "Disco Light Strip 0"
+  - platform: fastled_clockless
+    chipset: WS2812B
+    pin: GPIO04
+    num_leds: 76
+    rgb_order: BRG
+    name: "Disco Light Strip 1"
+  - platform: fastled_clockless
+    chipset: WS2812B
+    pin: GPIO05
+    num_leds: 76
+    rgb_order: BRG
+    name: "Disco Light Strip 2"
+  - platform: fastled_clockless
+    chipset: WS2812B
+    pin: GPIO16
+    num_leds: 76
+    rgb_order: BRG
+    name: "Disco Light Strip 3"
+  - platform: fastled_clockless
+    chipset: WS2812B
+    pin: GPIO14
+    num_leds: 76
+    rgb_order: BRG
+    name: "Disco Light Strip 4"
