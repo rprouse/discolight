@@ -8,7 +8,7 @@ NodeMCU V2 and built with [ESPHome](https://esphome.io/).
 | 0           | D3  | 00   |
 | 1           | D2  | 04   |
 | 2           | D1  | 05   |
-| 3           | D0  | 16   |
+| 3           | D6  | 12   |
 | 4           | D5  | 14   |
 
 ## Install ESPHome
